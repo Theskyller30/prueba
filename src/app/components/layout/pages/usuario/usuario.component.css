@@ -1,0 +1,127 @@
+.body1 {
+    padding-top: 1%;
+    font-family: "Inter", sans-serif;
+    background-color: #0073FF;
+    height: 1200px;
+}
+
+.container {
+    display: flex;
+    padding-left: 25%;
+    padding-top: 3%;
+}
+
+.card-1 {
+    --color: rgb(255, 7, 110);
+    --image: url("/assets/fondo2.jpg");
+}
+
+.card-2 {
+    --color: rgb(95, 0, 173);
+    --image: url("/assets/fondo1.jpg");
+}
+
+.card-3 {
+    --color: rgb(1, 19, 102);
+    --image: url("/assets/fondo3.jpg");
+}
+
+.card-4 {
+    --color: rgb(255, 147, 7);
+    --image: url("/assets/fondo4.jpg");
+}
+
+.card-5 {
+    --color: rgb(0, 170, 173);
+    --image: url("/assets/fondo6.jpg");
+}
+
+.card-6 {
+    --color: rgb(174, 0, 0);
+    --image: url("/assets/fondo5.jpg");
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 180px 150px 150px;
+    grid-template-areas: "image" "text" "stats";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 250px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 16px;
+    border-radius: 18px;
+}
+
+.card-image {
+    grid-area: image;
+    background: var(--image);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date {
+    color: var(--color);
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.card-text p {
+    color: grey;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.card-text h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: var(--color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card-stats .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+.card-stats .type {
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-stats .value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
